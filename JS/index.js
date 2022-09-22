@@ -1,4 +1,6 @@
 const grid = document.querySelector('.grid');
+const timer = document.querySelector('.Timer');
+
 const characters = [
     '1',
     '2',
@@ -9,9 +11,9 @@ const characters = [
     '7',
     '8',
     " ",
-  ];
+];
 
-  const createElement = (character,i) => {
+const createElement = (character,i) => {
     const Card = document.createElement('div');
     
     Card.innerHTML = character;
@@ -22,9 +24,9 @@ const characters = [
     console.log(character);
     Card.addEventListener('click',moverPeca);
     return Card;
-  }
+}
 
-  const loadGame = () => {
+const loadGame = () => {
     i=0;
     shuffledArray = characters.sort(() => Math.random() - 0.5);
     shuffledArray.forEach((character) => {
@@ -32,17 +34,19 @@ const characters = [
         i++;
         grid.appendChild(Case);
       });
-  }
+}
 
   window.onload = () => {
     loadGame();
-  }
+    startTimer();
+}
 const FimDeGame = () =>{
     var i=0;
     for(i=0;i<8 && grid.children[i].innerHTML==i+1;i++){
     }
     if(i==8){
-        window.alert("Parabens você vendeu!!!");
+        window.alert("Parabens você venceu!!!");
+        setTimeout(() => {}, 500);
     }
 }
 const moverPeca = ({ target }) => {
@@ -176,5 +180,13 @@ const moverPeca = ({ target }) => {
             }
     }
     FimDeGame();
+    
 
+}
+
+const startTimer = () => {
+    this.loop = setInterval(() => {
+      const currentTime = +timer.innerHTML;
+      timer.innerHTML = currentTime + 1;
+    }, 1000);
 }
