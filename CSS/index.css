@@ -1,33 +1,42 @@
 main {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    background-color: bisque;
-    min-height: 100vh;
+    background-color: rgb(218, 202, 184);
     align-items: center;
     justify-content: center;
-    padding: 20px 20px 50px;
     border: 3px black solid;
+    min-width: 100vh;
+    height: 100vh;
   }
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    border: 3px black solid;
+    gap: 5px;
+    min-width: 50%;
+    height: 80%;
+    border: 3px rgba(66, 1, 1, 0.938) solid;
+    background-color: rgb(56, 2, 2);
+    padding: 0.5%;
   }
   .Card{
-    background-color: red;
-    width: 220px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
     font-size: 64pt;
     text-align: center;
-    line-height: 220px;
+    padding: 15% 0% 0% 0%;;
+    background-color: rgb(214, 214, 214);
+    box-shadow: 4px 4px rgb(255, 255, 255);
+    border-radius: 20px;
   }
   .Teste{
     padding: 0px;
     margin: 0px;
     background-color: pink;
+  }
+  header{
+    border: 5px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 6px rgb(41, 41, 41);
+    background-color: tomato;
+    margin: 0 0 20px 0;
   }
