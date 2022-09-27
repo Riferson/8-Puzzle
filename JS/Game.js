@@ -10,18 +10,16 @@ const characters = [
     '6',
     '7',
     '8',
-    " ",
+    ' ',
 ];
 
 const createElement = (character,i) => {
     const Card = document.createElement('div');
     
     Card.innerHTML = character;
+
     Card.setAttribute('class', 'Card');
     Card.setAttribute('name', i);
-    
-    
-    console.log(character);
     Card.addEventListener('click',moverPeca);
     return Card;
 }
@@ -39,6 +37,7 @@ const loadGame = () => {
   window.onload = () => {
     loadGame();
     startTimer();
+    setPrimeiroVazio();
 }
 const FimDeGame = () =>{
     var i=0;
@@ -60,10 +59,12 @@ const moverPeca = ({ target }) => {
             if(grid.children[1].innerHTML === ' '){
                 grid.children[1].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,1);
                 break;
             }else if(grid.children[3].innerHTML === ' '){
                 grid.children[3].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,3);
                 break;
             }
             break;
@@ -71,14 +72,17 @@ const moverPeca = ({ target }) => {
             if(grid.children[0].innerHTML === ' '){
                 grid.children[0].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,0);
                 break;
             }else if(grid.children[2].innerHTML === ' '){
                 grid.children[2].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,2);
                 break;
             }else if(grid.children[4].innerHTML === ' '){
                 grid.children[4].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ';
+                EspacoVazio(Position,4);
                 break;
             }
             break;
@@ -86,10 +90,12 @@ const moverPeca = ({ target }) => {
             if(grid.children[1].innerHTML === ' '){
                 grid.children[1].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,1);
                 break;
             }else if(grid.children[5].innerHTML === ' '){
                 grid.children[5].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ';
+                EspacoVazio(Position,5);
                 break;
             }
             break;
@@ -97,14 +103,17 @@ const moverPeca = ({ target }) => {
             if(grid.children[0].innerHTML === ' '){
                 grid.children[0].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,0);
                 break;
             }else if(grid.children[4].innerHTML === ' '){
                 grid.children[4].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,4);
                 break;
             }else if(grid.children[6].innerHTML === ' '){
                 grid.children[6].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ';
+                EspacoVazio(Position,6);
                 break;
             }
             break;
@@ -112,18 +121,22 @@ const moverPeca = ({ target }) => {
             if(grid.children[1].innerHTML === ' '){
                 grid.children[1].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,1);
                 break;
             }else if(grid.children[3].innerHTML === ' '){
                 grid.children[3].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,3);
                 break;
             }else if(grid.children[5].innerHTML === ' '){
                 grid.children[5].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ';
+                EspacoVazio(Position,5);
                 break;
             }else if(grid.children[7].innerHTML === ' '){
                 grid.children[7].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ';
+                EspacoVazio(Position,7);
                 break;
             }
             break;
@@ -131,14 +144,17 @@ const moverPeca = ({ target }) => {
             if(grid.children[2].innerHTML === ' '){
                 grid.children[2].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,2);
                 break;
             }else if(grid.children[4].innerHTML === ' '){
                 grid.children[4].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,4);
                 break;
             }else if(grid.children[8].innerHTML === ' '){
                 grid.children[8].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ';
+                EspacoVazio(Position,8);
                 break;
             }
             break;
@@ -146,10 +162,12 @@ const moverPeca = ({ target }) => {
             if(grid.children[3].innerHTML === ' '){
                 grid.children[3].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,3);
                 break;
             }else if(grid.children[7].innerHTML === ' '){
                 grid.children[7].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,7);
                 break;
             }
             break;
@@ -157,14 +175,17 @@ const moverPeca = ({ target }) => {
             if(grid.children[4].innerHTML === ' '){
                 grid.children[4].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,4);
                 break;
             }else if(grid.children[6].innerHTML === ' '){
                 grid.children[6].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,6);
                 break;
             }else if(grid.children[8].innerHTML === ' '){
                 grid.children[8].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ';
+                EspacoVazio(Position,8);
                 break;
             }
             break;
@@ -172,16 +193,18 @@ const moverPeca = ({ target }) => {
             if(grid.children[5].innerHTML === ' '){
                 grid.children[5].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,5);
                 break;
             }else if(grid.children[7].innerHTML === ' '){
                 grid.children[7].innerHTML = grid.children[Position].innerHTML;
                 grid.children[Position].innerHTML = ' ' ;
+                EspacoVazio(Position,7);
                 break;
             }
     }
+
     FimDeGame();
     
-
 }
 
 const startTimer = () => {
@@ -189,4 +212,17 @@ const startTimer = () => {
       const currentTime = +timer.innerHTML;
       timer.innerHTML = currentTime + 1;
     }, 1000);
+}
+
+const EspacoVazio = (pos1,pos2) =>{
+    grid.children[pos1].setAttribute('class','EspacoVazio');
+    grid.children[pos2].setAttribute('class','Card');
+}
+
+const setPrimeiroVazio = () =>{
+    for(let i=0;i<9;i++){
+        if(grid.children[i].innerHTML == ' '){
+            EspacoVazio(i,null);
+        }
+    }
 }
