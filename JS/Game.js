@@ -44,8 +44,10 @@ const FimDeGame = () =>{
     for(i=0;i<8 && grid.children[i].innerHTML==i+1;i++){
     }
     if(i==8){
+        clearInterval(this.loop);
         window.alert("Parabens você venceu!!!");
         setTimeout(() => {}, 500);
+        window.location = '../index.html';
     }
 }
 const moverPeca = ({ target }) => {
