@@ -1,11 +1,14 @@
+body{
+  background-image: url(../Images/Background-Numbers.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
 main {
     display: flex;
     flex-direction: column;
-    background: rgb(109,9,121);
-    background: linear-gradient(120deg, rgba(109,9,121,1) 0%, rgba(122,111,242,1) 84%, rgba(62,12,236,1) 100%);
     align-items: center;
     justify-content: center;
-    border: 3px black solid;
     min-width: 100vh;
     height: 100vh;
   }
@@ -16,8 +19,9 @@ main {
     min-width: 50%;
     height: 80%;
     border: 3px rgba(0, 0, 0, 0.938) solid;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.712);
     padding: 0.5%;
+    border-radius: 5px;
   }
   .Card{
     width: 100%;

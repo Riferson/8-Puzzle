@@ -1,9 +1,19 @@
+body{
+    background-image: url(../Images/Background-Numbers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
 .login-form{
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: center;
+    margin: 10% auto;
+    height: 55vh;
+    width: 55vh;
+    border-radius: 10px;
+    background: rgba(209, 201, 198, 0.705);
 }
 
 .login_header{
